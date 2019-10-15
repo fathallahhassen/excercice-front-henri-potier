@@ -1,0 +1,11 @@
+<p *ngIf="!booksService.offers?.length">
+  no offers founds
+</p>
+
+<div class="books-offers d-flex flex-column justify-content-center align-items-center" *ngIf="booksService.offers?.length">
+  <div class="books-offers__item d-flex justify-content-around my-2 p-3 w-75" *ngFor="let offer of booksService.offers"
+       [ngClass]="GetOfferStyle(offer)">
+    <div class="books-offers__item__text">{{getOfferValueAndType(offer)}}</div>
+    <div class="books-offers__item__amount h-100">Total: {{ getAmountAfterDiscount(offer)}} €</div>
+  </div>
+</div>

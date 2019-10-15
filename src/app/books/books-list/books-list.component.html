@@ -1,0 +1,39 @@
+<div class="books-list">
+  <div class="books-list__icon-card float-right d-flex flex-column align-items-center"
+  (click)="booksService.checkOffers()">
+    <img alt="card-icon" src="assets/icons/online-store.svg">
+    <p class="mb-0" *ngIf="booksService.selectedBooks?.length">{{booksService.selectedBooks?.length}}</p>
+  </div>
+
+
+  <div class="books-list__search-input my-3 d-flex flex-column align-items-center justify-content-center">
+    <input
+      type="text"
+      id="return_agency"
+      placeholder="Search books"
+      (keyup)="filterBooks($event)">
+    <button class="mt-2 btn btn-primary"
+            *ngIf="booksService.selectedBooks?.length"
+    (click)="booksService.checkOffers()"> Check Offers for selected books</button>
+  </div>
+
+  <div class="books-list__result row d-flex flex-row justify-content-center p-3" *ngIf="booksService.booksList?.length">
+    <div class="books-list__result__book col-6 col-md-3 text-center m-2 py-3"
+         *ngFor=" let book of booksService.booksList"
+         (click)="selectBook(book)"
+         [ngClass]="checkBookSelected(book)"
+         (mouseenter)="detailItem(book)"
+         (mouseleave)="detailItem(null)">
+      <img src="{{book.cover}}">
+      <p>{{book.title}}</p>
+      <p>{{book.price}}€</p>
+      <p *ngIf="book.synopsis?.length" class="books-list__result__book__details">{{book.synopsis[0]}}</p>
+    </div>
+
+  </div>
+
+  <div class="loader" *ngIf="!booksService.booksList?.length">
+    loading books ..
+  </div>
+</div>
+

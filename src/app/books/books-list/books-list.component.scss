@@ -1,0 +1,51 @@
+.books-list {
+  &__icon-card {
+    margin-right: 2rem;
+    cursor: pointer;
+
+    img {
+      width: 3rem;
+    }
+
+    p {
+      color: orangered;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__search-input {
+    height: 5rem;
+  }
+
+  &__result {
+
+
+    &__book {
+      &__details {
+        height: 3rem;
+        overflow: hidden;
+      }
+
+      cursor: pointer;
+
+      &:hover {
+        background-color: darkgrey;
+      }
+
+      &--checked {
+        background-color: cornflowerblue;
+      }
+
+      img {
+        height: 10rem;
+        margin-bottom: .7rem;
+      }
+
+      p {
+        margin-bottom: .1rem;
+      }
+    }
+
+  }
+}
+

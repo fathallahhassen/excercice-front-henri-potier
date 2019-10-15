@@ -1,0 +1,17 @@
+.books-offers {
+  &__item {
+    height: 4rem;
+    background-color: lightgrey;
+
+    &__text {
+      color: blue;
+    }
+
+    &__amount {
+      border-radius: 0.4rem;
+      padding: 4px;
+      color: blue;
+      background-color: white;
+    }
+  }
+}
