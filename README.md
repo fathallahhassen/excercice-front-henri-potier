@@ -5,7 +5,7 @@ Or build the code and serve the content with a web server
 
 **http://localhost:4200/books** list of all books
 
-- Select the books you want to buy the click on the shopping card or the button bellow the search input to access the checkout page
+- Select the books you want to buy then click on the shopping card or the button bellow the search input to access the checkout page
 - Checkout page contain the different offers list and the final price after discount
 
 ## Build
