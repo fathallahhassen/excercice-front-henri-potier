@@ -1,3 +1,5 @@
+This project is developed using angular 7
+
 ## Development server
 
 Run `npm install` then `npm start` to run the a dev server. Navigate to `http://localhost:4200/`.
